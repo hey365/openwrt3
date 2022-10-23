@@ -57,12 +57,15 @@ jobs:
         sudo -E apt-get clean
     - name: Clone source code
       env: 
-        REPO_URL: https://github.com/coolsnowwolf/lede
+        REPO_URL: https://github.com/openwrt/openwrt
         REPO_BRANCH: master
       run: |
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
         echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
+        echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+        git clone https://github.com/jerrykuku/lua-maxminddb.git
+        git clone https://github.com/jerrykuku/luci-app-vssr.git
         
     - name: Update & Install feeds
       working-directory: ./openwrt
