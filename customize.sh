@@ -7,6 +7,9 @@
 #=================================================
 #1. Modify default IP
 sed -i 's/192.168.3.1/192.168.3.5/g' openwrt/package/base-files/files/bin/config_generate
+sed -i '108i\set network.$1.gateway='192.168.3.1'\
+set network.$1.dns='192.168.3.1 223.5.5.5 8.8.8.8'\
+' openwrt/package/base-files/files/bin/config_generate
 
 #2. Clear the login password
 #sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-settings/files/zzz-default-settings
