@@ -16,3 +16,7 @@ set network.$1.dns='192.168.3.1 223.5.5.5 8.8.8.8'\
 
 #3. Replace with JerryKuKu’s Argon
 rm openwrt/package/lean/luci-theme-argon -rf
+
+#4. Modify default dhcp
+sed -i '31,33d' openwrt/package/network/services/dnsmasq/files/dhcp.conf
+sed -i '30a\option ignore '1'\' openwrt/package/network/services/dnsmasq/files/dhcp.conf
