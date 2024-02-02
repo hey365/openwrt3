@@ -21,3 +21,6 @@ rm openwrt/package/lean/luci-theme-argon -rf
 #4. Modify default dhcp
 sed -i '31,33d' openwrt/package/network/services/dnsmasq/files/dhcp.conf
 sed -i '30a\option ignore '1'\' openwrt/package/network/services/dnsmasq/files/dhcp.conf
+#5. Modify default lauguage
+sed -i '16a\option zh_cn 'chinese'\
+option en  'English'\' openwrt/feeds/luci/modules/luci-base/root/etc/config/luci
