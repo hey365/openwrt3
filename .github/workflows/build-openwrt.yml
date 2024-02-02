@@ -1,3 +1,4 @@
+
 #
 # Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
 #
@@ -68,6 +69,7 @@ jobs:
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
+        ./scripts/feeds/ install luci
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
