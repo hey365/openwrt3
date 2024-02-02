@@ -16,7 +16,7 @@ sed -i 's/option lang auto/option lang zh_cn/g' openwrt/feeds/luci/modules/luci-
 #sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-settings/files/zzz-default-settings
 
 #3. Replace with JerryKuKu’s Argon
-rm openwrt/package/lean/luci-theme-argon -rf
+#rm openwrt/package/lean/luci-theme-argon -rf
 
 #4. Modify default dhcp
 sed -i '31,33d' openwrt/package/network/services/dnsmasq/files/dhcp.conf
