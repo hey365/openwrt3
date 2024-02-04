@@ -22,6 +22,5 @@ set network.$1.dns='192.168.3.1'\
 sed -i '31,33d' openwrt/package/network/services/dnsmasq/files/dhcp.conf
 sed -i '30a\option ignore '1'\' openwrt/package/network/services/dnsmasq/files/dhcp.conf
 #5. Modify default lauguage
-sed -i '16a\option zh_cn 'chinese'\
-option en  'English'\' openwrt/feeds/luci/modules/luci-base/root/etc/config/luci
+sed -i '2a option zh_cn '\''chinese'\''\noption en '\''English'\''' openwrt/feeds/luci/modules/luci-base/root/etc/config/luci
 sed -i 's/option lang auto/option lang zh_cn/g' openwrt/feeds/luci/modules/luci-base/root/etc/config/luci
