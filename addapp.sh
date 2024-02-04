@@ -19,7 +19,7 @@ echo "applications/luci-app-kodexplorer" >> .git/info/sparse-checkout
 git pull --depth 1 origin master
 
 # 修改权限
-chmod 777 ./applications/*
+find ./applications/ -type f -exec chmod +x {} \;
 
 # 现在，你的仓库目录中应该只有“applications/luci-app-kodexplorer”这个路径的文件,把它移动到openwrt的pakcage文件夹下
 
