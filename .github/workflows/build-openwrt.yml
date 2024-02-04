@@ -79,6 +79,7 @@ jobs:
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./customize.sh && ./customize.sh
+        chmod +x ./addapp.sh && ./addapp.sh
         cd openwrt && make defconfig
         
     - name: SSH connection to Actions
