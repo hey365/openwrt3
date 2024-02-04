@@ -23,5 +23,5 @@ chmod 777 ./applications/*
 
 # 现在，你的仓库目录中应该只有“applications/luci-app-kodexplorer”这个路径的文件,把它移动到openwrt的pakcage文件夹下
 
- mv ./applications/* ./openwrt/package/
+ mv ./applications/* ../openwrt/package/
 
