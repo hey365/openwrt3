@@ -87,8 +87,8 @@ jobs:
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./customize.sh && ./customize.sh
-        mv -f luci.nk openwrt/luck.mk
-        mv -f rules.nk openwrt/rules.mk
+        mv -f luci.mk openwrt/luck.mk
+        mv -f rules.mk openwrt/rules.mk
         chmod +x ./addapp.sh && ./addapp.sh
         cd openwrt && make defconfig
         
