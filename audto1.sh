@@ -32,7 +32,12 @@ python-docutils python3-pyelftools qemu-utils re2c rsync scons squashfs-tools su
 texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
 sudo -E apt-get -y autoremove --purge
 sudo -E apt-get clean
-#创建用户
+
+#创建用户,先赋予sudo权限
+sudo sed -i '20a wd      ALL=(ALL:ALL) ALL' /etc/sudoers
+#创建wd用户组
 groupadd wd
-useradd -g  wd -d /home/wd -s /bin/bash -m  wd
-passwd  wd
+#创建wd用户并设置密码为password!
+sudo useradd -g wd -d /home/wd -s /bin/bash -m wd && echo 'wd:password!' | sudo chpasswd
+#重启
+reboot
