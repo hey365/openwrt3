@@ -24,4 +24,5 @@ find ./package/lean/ -type f -exec chmod +x {} \;
 # 现在把它移动到openwrt的pakcage文件夹下
 
  mv -f ./package/lean/* ../openwrt/package/
-
+ #返回上一级目录
+ cd ../
