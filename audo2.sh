@@ -3,7 +3,7 @@
 sudo apt install screen
 
 #创建新窗口
-screen -S my_screen -X screen
+screen -S my_screen -r screen
 
 #切换用户
 
