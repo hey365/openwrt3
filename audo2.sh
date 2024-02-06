@@ -1,6 +1,6 @@
 #!/bin/bash
-#先切换用户为wd
-su -l wd
+#先切换用户为opwrt
+su -l opwrt
 
 #git clone仓库
 git clone --depth 1 https://github.com/openwrt/openwrt -b v23.05.0 openwrt
