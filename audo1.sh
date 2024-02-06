@@ -41,7 +41,7 @@ groupadd opwrt
 sudo useradd -g opwrt -d /home/opwrt -s /bin/bash -m opwrt && echo 'opwrt:Q%sdt854%' | sudo chpasswd
 
 #把文件移动到opwrt用户的主目录下
-mv !(audo2.sh) /home/opwrt/ && sudo chown -R opwrt /home/opwrt/
+mv !(audo1.sh|audo2.sh) /home/opwrt/ && sudo chown -R opwrt /home/opwrt/
 
 #重启
 reboot
