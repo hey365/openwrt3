@@ -27,3 +27,5 @@ find ./applications/ -type f -exec chmod +x {} \;
 
  mv -f ./applications/* ../openwrt/package/
 
+# 返回上一级目录
+cd ../
