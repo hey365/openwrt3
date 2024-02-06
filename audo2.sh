@@ -7,8 +7,8 @@ screen -S my_screen -X screen
 
 #切换用户
 
-screen -S my_screen -p 0 -X stuff "su opwrt$(printf \\r)"
+screen -r my_screen -p 0 -X stuff "su opwrt$(printf \\r)"
 
 #运行audo3.sh
 
-screen -S my_screen -p 0 -X stuff "cd ~ && ./audo3.sh$(printf \\r)"
+screen -r my_screen -p 0 -X stuff "cd ~ && ./audo3.sh$(printf \\r)"
