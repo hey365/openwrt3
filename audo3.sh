@@ -17,6 +17,7 @@ mv -f ./rules.mk openwrt/rules.mk
 chmod +x ./addapp*.sh && ./addapp*.sh
 
 #下载依赖
+cd ./openwrt
 ./scripts/feeds update -a
 ./scripts/feeds install -a && ./scripts/feeds install -a
 
