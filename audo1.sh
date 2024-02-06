@@ -34,10 +34,10 @@ sudo -E apt-get -y autoremove --purge
 sudo -E apt-get clean
 
 #创建用户,先赋予sudo权限
-sudo sed -i '20a wd      ALL=(ALL:ALL) ALL' /etc/sudoers
-#创建wd用户组
-groupadd wd
-#创建wd用户并设置密码为password!
-sudo useradd -g wd -d /home/wd -s /bin/bash -m wd && echo 'wd:password!' | sudo chpasswd
+sudo sed -i '20a opwrt      ALL=(ALL:ALL) ALL' /etc/sudoers
+#创建opwrt用户组
+groupadd opwrt
+#创建opwrt用户并设置密码为password!
+sudo useradd -g opwrt -d /home/opwrt -s /bin/bash -m opwrt && echo 'opwrt:password!' | sudo chpasswd
 #重启
 reboot
