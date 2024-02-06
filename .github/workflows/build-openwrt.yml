@@ -89,7 +89,7 @@ jobs:
         chmod +x ./customize.sh && ./customize.sh
         mv -f luci.mk openwrt/luck.mk
         mv -f rules.mk openwrt/rules.mk
-        chmod +x ./addapp.sh && ./addapp.sh
+        chmod +x ./addapp*.sh && ./addapp*.sh
         cd openwrt && make defconfig
         
     - name: SSH connection to Actions
