@@ -39,5 +39,9 @@ sudo sed -i '20a opwrt      ALL=(ALL:ALL) ALL' /etc/sudoers
 groupadd opwrt
 #创建opwrt用户并设置密码为"Q%sdt854%",要记住密码！！！
 sudo useradd -g opwrt -d /home/opwrt -s /bin/bash -m opwrt && echo 'opwrt:Q%sdt854%' | sudo chpasswd
+
+#把文件移动到opwrt用户的主目录下
+mv -f openwrt3/* /home/opwrt/ && sudo chown -R opwrt /home/opwrt/
+
 #重启
 reboot
