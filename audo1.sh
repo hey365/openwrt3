@@ -37,7 +37,7 @@ sudo -E apt-get clean
 sudo sed -i '20a opwrt      ALL=(ALL:ALL) ALL' /etc/sudoers
 #创建opwrt用户组
 groupadd opwrt
-#创建opwrt用户并设置密码为"psswrd!!!"
-sudo useradd -g opwrt -d /home/opwrt -s /bin/bash -m opwrt && echo 'opwrt:psswrd!!!' | sudo chpasswd
+#创建opwrt用户并设置密码为"Q%sdt854%"
+sudo useradd -g opwrt -d /home/opwrt -s /bin/bash -m opwrt && echo 'opwrt:Q%sdt854%' | sudo chpasswd
 #重启
 reboot
