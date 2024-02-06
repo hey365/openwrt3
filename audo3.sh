@@ -1,6 +1,4 @@
 #!/bin/bash
-#把文件移动到opwrt用户的主目录下
-mv -f openwrt3/* /home/opwrt/
 #切换用户为opwrt
 su -l opwrt
 
