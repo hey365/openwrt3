@@ -1,3 +1,4 @@
+#!/bin/bash
 cd openwrt
 make download -j$(nproc)
 find dl -size -1024c -exec ls -l {} \;
