@@ -14,9 +14,10 @@ mv -f ./luci.mk openwrt/luci.mk
 mv -f ./rules.mk openwrt/rules.mk
 
 #添加自定义程序，如luci-app-kodexplorer
-chmod +x ./addapp1.sh && ./addapp1.sh
-chmod +x ./addapp2.sh && ./addapp2.sh
-chmod +x ./addapp3.sh && ./addapp3.sh
+chmod +x ./add_lede.sh && ./add_lede.sh
+chmod +x ./add_luci.sh && ./add_luci.sh
+chmod +x ./add_opwrt.sh && ./add_opwrt.sh
+chmod +x ./add_packages.sh && ./add_packages.sh
 
 #下载依赖
 cd ./openwrt
