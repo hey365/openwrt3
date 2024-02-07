@@ -17,6 +17,7 @@ git config core.sparsecheckout true
 echo "applications/luci-app-kodexplorer" >> .git/info/sparse-checkout
 echo "applications/luci-app-argon-config" >> .git/info/sparse-checkout
 echo "applications/luci-app-diskman" >> .git/info/sparse-checkout
+echo "applications/luci-app-vlmcsd" >> .git/info/sparse-checkout
 
 git pull --depth 1 origin master
 
