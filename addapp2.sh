@@ -14,7 +14,7 @@ git remote add origin https://github.com/coolsnowwolf/lede.git
 git config core.sparsecheckout true
 
 # 将要部分克隆的目录相对于仓库根目录的路径写入配置文件
-echo "package/lean/vsftpd-alt" >> .git/info/sparse-checkout
+#echo "package/lean/vsftpd-alt" >> .git/info/sparse-checkout
 
 git pull --depth 1 origin master
 
