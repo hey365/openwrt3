@@ -18,9 +18,11 @@ chmod +x ./add_lede.sh && ./add_lede.sh
 chmod +x ./add_luci.sh && ./add_luci.sh
 chmod +x ./add_opwrt.sh && ./add_opwrt.sh
 chmod +x ./add_packages.sh && ./add_packages.sh
-
+cd openwrt/package
+git clone https://github.com/jerrykuku/luci-theme-argon.git
+git clone https://github.com/jerrykuku/luci-app-argon-config.git
 #下载依赖
-cd ./openwrt
+cd ../
 ./scripts/feeds update -a
 ./scripts/feeds install -a && ./scripts/feeds install -a
 
