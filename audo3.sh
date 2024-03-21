@@ -26,7 +26,7 @@ cd ./openwrt
 
 #编辑配置文件
 cd ../
-mv -f .config openwrt/.config
+mv -f default.config openwrt/.config
 chmod +x ./customize.sh && ./customize.sh
 cd openwrt && make defconfig
 make menucofig
