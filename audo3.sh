@@ -11,7 +11,7 @@ sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
         
 #切换路径并拷贝编译文件
 cd ../
-mv -f ./luci.mk openwrt/luci.mk
+mv -f ./luci.mk openwrt/package/luci.mk
 #mv -f ./rules.mk openwrt/rules.mk
 
 #添加自定义程序，如luci-app-kodexplorer
