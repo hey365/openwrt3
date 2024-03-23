@@ -20,6 +20,7 @@ chmod +x ./add_luci.sh && ./add_luci.sh
 chmod +x ./add_opwrt.sh && ./add_opwrt.sh
 chmod +x ./add_packages.sh && ./add_packages.sh
 cd openwrt/package
+rm -rf luci-theme-argon && rm -rf luci-app-argon-config
 git clone https://github.com/jerrykuku/luci-theme-argon.git
 git clone https://github.com/jerrykuku/luci-app-argon-config.git
 #下载依赖
