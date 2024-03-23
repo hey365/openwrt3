@@ -7,12 +7,12 @@ git clone --depth 1 https://github.com/openwrt/openwrt -b v23.05.0 openwrt
 cd openwrt
 sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
- sed -i '$a src-git jerryk https://github.com/jerrykuku/openwrt-package' feeds.conf.default 
+#sed -i '$a src-git jerryk https://github.com/jerrykuku/openwrt-package' feeds.conf.default 
         
 #切换路径并拷贝编译文件
 cd ../
 mv -f ./luci.mk openwrt/luci.mk
-mv -f ./rules.mk openwrt/rules.mk
+#mv -f ./rules.mk openwrt/rules.mk
 
 #添加自定义程序，如luci-app-kodexplorer
 chmod +x ./add_lede.sh && ./add_lede.sh
@@ -30,7 +30,7 @@ cd ../
 
 #编辑配置文件
 cd ../
-mv -f default.config openwrt/.config
+mv -f build.config openwrt/.config
 chmod +x ./customize.sh && ./customize.sh
 cd openwrt && make defconfig
 make menucofig
