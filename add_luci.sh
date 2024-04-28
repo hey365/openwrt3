@@ -23,9 +23,14 @@ git pull --depth 1 origin master
 # 修改权限
 find ./applications/ -type f -exec chmod +x {} \;
 #修改kodexplorer的Makefile
-sed -i 's/../../luci.mk/$(TOPDIR)/feeds/luci/luci.mk/g' applications/luci-app-kodexplorer/Makefile
-sed -i 's/../../luci.mk/$(TOPDIR)/feeds/luci/luci.mk/g' applications/luci-app-diskman/Makefile
-sed -i 's/../../luci.mk/$(TOPDIR)/feeds/luci/luci.mk/g' applications/luci-app-vlmcsd/Makefile
+sed -i '/include \.\.\/\.\.\/luci\.mk/d' applications/luci-app-kodexplorer/Makefile
+sed -i '$i\include $(TOPDIR)/feeds/luci/luci.mk' applications/luci-app-kodexplorer/Makefile
+
+sed -i '/include \.\.\/\.\.\/luci\.mk/d' applications/luci-app-diskman/Makefile
+sed -i '$i\include $(TOPDIR)/feeds/luci/luci.mk' applications/luci-app-diskman/Makefile
+
+sed -i '/include \.\.\/\.\.\/luci\.mk/d' applications/luci-app-vlmcsd/Makefile
+sed -i '$i\include $(TOPDIR)/feeds/luci/luci.mk' applications/luci-app-vlmcsd/Makefile
 # 现在把它移动到openwrt的pakcage文件夹下
 
  mv -f ./applications/* ../openwrt/package/
