@@ -16,7 +16,7 @@ git config core.sparsecheckout true
 # 将要部分克隆的目录相对于仓库根目录的路径写入配置文件
 echo "applications/luci-app-kodexplorer" >> .git/info/sparse-checkout
 echo "applications/luci-app-diskman" >> .git/info/sparse-checkout
-
+echo "applications/luci-app-vlmcsd" >> .git/info/sparse-checkout
 
 git pull --depth 1 origin master
 
