@@ -15,6 +15,7 @@ git config core.sparsecheckout true
 
 # 将要部分克隆的目录相对于仓库根目录的路径写入配置文件
 echo "lang/python" >> .git/info/sparse-checkout
+echo "net/vlmcsd" >> .git/info/sparse-checkout
 
 git pull --depth 1 origin master
 
@@ -24,5 +25,6 @@ find ./lang/ -type f -exec chmod +x {} \;
 # 现在把它移动到openwrt的pakcage文件夹下
 
  mv -f ./lang/* ../openwrt/package/
+ mv -f ./net/* ../openwrt/package/
  #返回上一级目录
  cd ../
