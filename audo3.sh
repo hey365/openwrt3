@@ -11,8 +11,8 @@ sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
         
 #切换路径并拷贝编译文件
 cd ../
-mv -f ./luci.mk openwrt/luci.mk
-mv -f ./rules.mk openwrt/rules.mk
+#mv -f ./luci.mk openwrt/luci.mk
+#mv -f ./rules.mk openwrt/rules.mk
 
 #添加自定义程序，如luci-app-kodexplorer
 chmod +x ./add_lede.sh && ./add_lede.sh
@@ -27,6 +27,9 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git
 cd ../
 ./scripts/feeds update -a
 ./scripts/feeds install -a && ./scripts/feeds install -a
+#换掉golang
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 
 #编辑配置文件
 cd ../
