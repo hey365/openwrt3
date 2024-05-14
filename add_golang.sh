@@ -21,7 +21,7 @@ git pull --depth 1 origin master
 
 
 # 现在把它移动到openwrt的pakcage文件夹下
-
+rm -rf ../openwrt/feeds/packages/lang/golang
  mv -f ./lang/* ../openwrt/feeds/packages/lang/
 
  #返回上一级目录
