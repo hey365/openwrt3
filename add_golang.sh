@@ -3,7 +3,6 @@
 # 创建一个与要克隆的仓库同名或不同命的目录
 mkdir -p golang
 cd golang
-rm -rf ../openwrt/feeds/packages/lang/golang
 
 # 初始化一个新的Git仓库
 git init
@@ -26,3 +25,4 @@ rm -rf ../openwrt/feeds/packages/lang/golang
 
  #返回上一级目录
  cd ../
+rm -rf golang
