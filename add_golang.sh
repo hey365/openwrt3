@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # 创建一个与要克隆的仓库同名或不同命的目录
-mkdir -p packages
-cd packages
+mkdir -p golang
+cd golang
 rm -rf ../openwrt/feeds/packages/lang/golang
 
 # 初始化一个新的Git仓库
