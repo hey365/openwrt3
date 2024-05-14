@@ -19,6 +19,7 @@ chmod +x ./add_lede.sh && ./add_lede.sh
 chmod +x ./add_luci.sh && ./add_luci.sh
 chmod +x ./add_opwrt.sh && ./add_opwrt.sh
 chmod +x ./add_packages.sh && ./add_packages.sh
+chmod +x ./add_golang.sh && ./add_golang.sh
 cd openwrt/package
 rm -rf luci-theme-argon && rm -rf luci-app-argon-config
 git clone https://github.com/jerrykuku/luci-theme-argon.git
