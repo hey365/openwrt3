@@ -35,5 +35,5 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git
 cd ../
 mv -f build.config openwrt/.config
 chmod +x ./customize.sh && ./customize.sh
-cd openwrt && make defconfig
+cd openwrt
 make menucofig
