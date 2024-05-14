@@ -14,7 +14,12 @@ cd ../
 #mv -f ./luci.mk openwrt/luci.mk
 #mv -f ./rules.mk openwrt/rules.mk
 
+#下载依赖
+cd openwrt
+./scripts/feeds update -a
+./scripts/feeds install -a && ./scripts/feeds install -a
 #添加自定义程序，如luci-app-kodexplorer
+cd ../
 chmod +x ./add_lede.sh && ./add_lede.sh
 chmod +x ./add_luci.sh && ./add_luci.sh
 chmod +x ./add_opwrt.sh && ./add_opwrt.sh
@@ -24,13 +29,7 @@ cd openwrt/package
 rm -rf luci-theme-argon && rm -rf luci-app-argon-config
 git clone https://github.com/jerrykuku/luci-theme-argon.git
 git clone https://github.com/jerrykuku/luci-app-argon-config.git
-#下载依赖
-cd ../
-./scripts/feeds update -a
-./scripts/feeds install -a && ./scripts/feeds install -a
-#换掉golang
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
+
 
 #编辑配置文件
 cd ../
