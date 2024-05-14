@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #git clone仓库
-git clone --depth 1 https://github.com/openwrt/openwrt -b v23.05.0 openwrt
+git clone --depth 1 https://github.com/openwrt/openwrt -b v23.05.3 openwrt
 
 #添加源
 cd openwrt
