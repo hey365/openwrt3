@@ -32,7 +32,7 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git
 
 
 #编辑配置文件
-cd ../
+cd ../../
 mv -f default.config openwrt/.config
 chmod +x ./customize.sh && ./customize.sh
 cd openwrt
